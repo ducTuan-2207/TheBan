@@ -1,0 +1,422 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.margin-top-8 {
+    margin-top: 8px !important;
+}
+
+/* .margin-bottom-16 {
+    margin-bottom: 16px;
+} */
+/* hàng */
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+/* cột đơn */
+.colum {
+    float:left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.colum-full {
+    width:100%;
+}
+/* cột ba */
+.colum-thirt {
+    width:33.33333%;
+   
+}
+.text-center {
+     text-align: center !important;
+}
+/* cột hai */
+.colum-half {
+    width:50%;
+}
+
+.clear {
+    clear:both;
+}
+/* giải quyết vấn đề float (thẻ cha không ôm được thẻ con) */
+.text-white {
+    color:#fff !important;
+    /* ưu tiên nhất */
+}
+#header{
+    height :46px;
+    background-color: #000;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1; /*làm cho header nổi lên khi thêm thuộc tính position ở phần slider*/
+}
+#nav {
+    display:inline-block;
+}
+#nav ,.subnav {
+    list-style-type: none;
+}
+
+#nav  >li {
+    display: inline-block;
+}
+#nav li {
+    display: inline-block;
+    position: relative;
+
+}
+
+#nav .subnav {
+    display: none;
+    position:absolute;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.5);
+    min-width: 160px;
+}
+#nav li:hover .subnav{
+    display:block;
+}
+#nav .subnav li :hover {
+
+    color:#000;
+    background-color: #ccc;  
+}
+#nav > li > a {
+    color:#fff;
+    width :100%;
+    text-transform: uppercase;
+}
+#nav li a {
+    
+    text-decoration: none;
+    line-height: 46px;
+    padding :0 24px;
+    display:inline-block;
+    color:#fff;
+    
+}
+#nav li a:hover  {
+
+    background-color: #ccc;
+    color:#000
+}
+/* #nav. nav-down {
+    font-size: 14px;
+} */
+.search-btn {
+     float: right; /*float xóa bỏ thuộc tính kế thừa của thẻ div(chiếm 100% thẻ cha)*/
+     line-height: 46px;
+     padding :0 18px;
+     border-radius: 5%;
+     
+    
+} 
+.search-icon {
+    color:#fff;
+    font-size: 20px;
+    width:100%;
+}
+.search-btn:hover {
+    cursor: pointer;
+    background-color: red ;
+}
+#slider {
+    margin-top: 46px;
+    padding-top:50%;
+    background: url('./img/chicago.jpg') top center / cover no-repeat;
+    position:relative;
+}
+.slider-content {
+    color:#fff;
+    position:absolute;
+    bottom:47px;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.textTren{
+    font-weight: 500;
+    font-size: 24px;
+}
+.textDuoi {
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 25px;
+}
+#content {
+    background-color:#ccc;
+    height:1000px;
+}
+#content .content-section {
+    width: 800px;
+    padding: 64px 0 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+    /* tạo khoảng cách chữ */
+}
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+#content .about-text {
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: justify;
+    /* tạo 2 đầu đoạn thẳng hàng */
+    line-height: 1.4;
+}
+#content .member-list {
+    padding-top:47px;
+    /* overflow: hidden; */
+
+}
+#content .member-item {
+    /* float:left; */
+    width:33.33333%;
+}
+#content .member-name {
+    
+    font-size: 15px;
+}
+#content .member-img {
+    padding-top:15px;
+    width:154px;
+    border-radius: 5px;
+}
+/* tour-section */
+.tour-section {
+    background-color: #000;
+}
+.tiket-list {
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+.tiket-list li {
+    color:#757575;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.tiket-list .sold-out {
+    background-color: rgb(245, 124, 124);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.tiket-list .quantily {
+   float:right ;
+   background-color: #000000;
+    padding:2px 8px;
+    border-radius: 50%;
+    margin-top:-2px;
+}
+.tour-place {
+   /* margin: 32px -8px 48px ; */
+   margin-top: 32px;
+   margin-bottom: 48px;
+}
+.place-img {
+    width: 100%;
+}
+.tour-place-list {
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+}
+.place-item {
+    background-color: #fff;
+    padding : 0px 15px;
+}
+.place-name {
+    padding:13px 0;
+}
+.place-sub {
+    padding:15px 0;
+    opacity: 0.6;
+}
+.buy-tiket {
+    display:inline-block;
+    margin: 8px 0;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 2%;
+}
+.buy-tiket:hover {
+    color: #000000;
+    background-color: #ccc;
+}
+/* tao phan modal */
+.modal {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgb(0,0,0,0.3);
+    /* display:flex; */
+   /* biến modal lớn thành giao diện */
+   /* sửa flex thành none để ẩn đi */
+   display:none;
+    align-items: center;
+    /* cho modal-contaner nằm giữa thằng cha modal */
+    justify-content: center;
+    /* nằm giữa chiều ngang thằng cha modal */
+}
+.modal.open {
+    display:flex;
+}
+.modal-container {
+    max-width: calc(100%-32px);
+    background-color: #fff;
+    width:900px;
+    min-height: 300px;
+    position:relative;
+    animation: ChuyenDong ease 0.4s;
+}
+.modal-body {
+    padding:14px 15px;
+}
+.modal-label {
+    padding:10px 0;
+    font-size: 15px;
+}
+.tiket-buy {
+    margin-right: 18px;
+}
+.modal-header {
+    font-size: 30px;
+    letter-spacing:4px ;
+    font-weight: 400;
+    background-color: #009688;
+    text-align: center;
+    padding:32px 0;
+}
+.modal-close {
+    position: absolute;
+    color:#fff;
+    right:0;
+    top:0;
+    padding :6px 6px;
+    /* background-color: #ccc; */
+}
+.modal-close:hover {
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-label,
+modal-label {
+    display: block;
+}
+.modal-input {
+    border: 1px solid #ccc;
+    width:100%;
+    font-size: 15px;
+    padding:10px;
+}
+#Buy-modal {
+    border: 1px solid #ccc;
+    width:100%;
+    background-color: #009688;
+    padding:16px;
+    margin-top: 15px;
+    color:#fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+#Buy-modal:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+.needhel-modal {
+    display: inline-flex;
+    margin: 15px 0;
+    text-align: center;
+    float:right;
+}
+.modal-help {
+    margin-left: 4px;
+    color:#009688;
+}
+.ticker {
+    padding: 15px;
+}
+.sub-contact {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-style:italic;
+}
+.form-control {
+    padding:10px;
+    width:100%;
+}
+.Send-contact {
+    padding :8px 16px;
+    margin-top: 16px;
+    float:right;
+    background-color: #000;
+    color:#fff;
+}
+.Send-contact:hover {
+    cursor: pointer;
+    background-color: #ccc;
+    color:#000;
+}
+.abc {
+    margin-bottom:112px;
+}
+.map-section {
+    width:100%;
+}
+.social {
+    text-align: center;
+    line-height: auto;
+    font-size: 25px;
+    
+}
+.social>a {
+    text-decoration: none;
+}
+.thuongHieu {
+    
+    color:rgb(48, 46, 46);  
+}
+
+.by{
+    padding-top:10px;
+    font-weight:600;
+    color:#757575;
+}
+.thuongHieu,
+.tuan:hover {
+    opacity:0.6;
+}
+@keyframes ChuyenDong {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+
